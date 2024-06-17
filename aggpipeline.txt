@@ -1,0 +1,24 @@
+//following aggegration pipeline e.g contains two stages and returns the total 
+order quantity of meidum sized pizzas grouped by pizza name:
+
+db.orders.aggregate( [
+
+   // Stage 1: Filter pizza order documents by pizza size
+   {
+      $match: { size: "medium" }
+   },
+
+   // Stage 2: Group remaining documents by pizza name and calculate total quantity
+   {
+      $group: { _id: "$name", totalQuantity: { $sum: "$quantity" } }
+   }
+
+] )
+
+//$match -Filters the pizza order documents to pizzas with a size of medium.
+and passes the remaining docs to the $group stage
+
+//$group stage
+
+Groups the remaining documents by pizza name.
+Uses $sum to calculate the total order quantity for each pizza name. The total is stored in the totalQuantity field returned by the aggregation pipeline.
