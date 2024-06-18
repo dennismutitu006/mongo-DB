@@ -1,0 +1,12 @@
+{
+    "title": "Reading and Writing CSV Files in Python",
+    "author": "Jon",
+    "contributors": [
+        "Aldren",
+        "Geir Arne",
+        "Joanna",
+        "Jason"
+    ],
+    "url": "https://realpython.com/python-csv/"
+}
+//the case of the tutorials for your Python site, your documents might be structured like this.
