@@ -1,0 +1,22 @@
+//To insert a document into a database using the mongo shell
+//you first need to choose a collection and then call .insertOne()
+//on the collection with ur doc as arg
+
+> use rptutorials
+switched to db rptutorials
+
+> db.tutorial.insertOne({
+...     "title": "Reading and Writing CSV Files in Python",
+...     "author": "Jon",
+...     "contributors": [
+...         "Aldren",
+...         "Geir Arne",
+...         "Joanna",
+...         "Jason"
+...     ],
+...     "url": "https://realpython.com/python-csv/"
+... })
+{
+    "acknowledged" : true,
+    "insertedId" : ObjectId("600747355e6ea8d224f754ba")
+}
